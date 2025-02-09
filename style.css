@@ -97,6 +97,8 @@ button {
 
     overflow: hidden;
 
+    padding: 10px
+
 }
 
 
@@ -153,32 +155,4 @@ textarea {
 
 }
 
-@media (max-width: 600px) {
 
-    #envelope {
-
-        max-width: 90%; /* Use 90% of the screen width on small devices */
-
-    }
-
-
-    #question p {
-
-        font-size: 1.2em; /* Increase font size for better readability */
-
-    }
-
-
-    button {
-
-        width: 100%; /* Make buttons full width */
-
-        padding: 10px; /* Add padding for better touch targets */
-
-        font-size: 1em; /* Increase font size for buttons */
-
-        margin: 5px 0; /* Space between buttons */
-
-    }
-
-}
