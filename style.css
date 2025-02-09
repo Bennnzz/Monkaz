@@ -34,6 +34,7 @@ body {
     font-size: 52px; /* Set font size for the question */
     text-align: center;
     display: flex;
+    padding: 10px;
 }
 
 #options {
@@ -55,7 +56,7 @@ button {
 
     position: relative;
 
-    width: 60%;
+    width: 80%;
 
     height: 60%;
 
