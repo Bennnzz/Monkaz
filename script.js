@@ -3,7 +3,7 @@
 // Function to handle button click events
 let noButtonMessages = [
 
-    'Pleaseeeeee?',
+    'Are you suree?',
 
     'Pleasee?',
 
@@ -24,13 +24,15 @@ function selectOption(option) {
 
         // Flash rainbow colors
 
-        flashRainbowColors(function() {
+    {
 
-            document.getElementById('question').style.display = 'none'; // Hide the question
+            document.getElementById('question').innerText = 'I love you :3';
+            document.getElementById('no-button').style.display = 'none';
+            document.getElementById('yes-button').style.display = 'none'; // Hide the question
+            showEnvelope();
+            
 
-            displayCatHeart(); // Display the cat-heart.gif
-
-        });
+        };
 
     } else if (option === 'no') {
 
@@ -66,22 +68,61 @@ function selectOption(option) {
 }
 
 
-// Function to flash rainbow colors and then execute a callback function
-function flashRainbowColors(callback) {
-    var colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
-    var i = 0;
-    var interval = setInterval(function() {
-        document.body.style.backgroundColor = colors[i];
-        i = (i + 1) % colors.length;
-    }, 200); // Change color every 200 milliseconds
-    setTimeout(function() {
-        clearInterval(interval);
-        document.body.style.backgroundColor = ''; // Reset background color
-        if (callback) {
-            callback();
-        }
-    }, 2000); // Flash colors for 2 seconds
+function showEnvelope() {
+
+    const envelope = document.getElementById('envelope');
+
+    envelope.classList.remove('hidden');
+
+    envelope.classList.add('animate'); // Add animation class
+
+    envelope.style.transform = 'scale(1)'; // Ensure the envelope scales to 1
+
+    envelope.style.opacity = '1'; // Ensure the envelope is fully opaque
+
+    function showEnvelope() {
+
+    const envelope = document.getElementById('envelope');
+
+    envelope.classList.remove('hidden');
+
+    setTimeout(() => {
+
+        envelope.classList.add('show'); // Add animation class
+
+    }, 10); // Small timeout to ensure the class is applied after rendering
+
 }
+
+    
+
+    // Use a timeout to allow the browser to render the element before adding the animation class
+
+    setTimeout(() => {
+
+        envelope.classList.add('show'); // Add animation class
+
+    }, 10); // Small timeout to ensure the class is applied after rendering
+
+}
+
+
+
+
+// Event listeners for buttons
+
+document.getElementById('yes-button').addEventListener('click', function() {
+
+    selectOption('yes');
+
+});
+
+
+document.getElementById('no-button').addEventListener('click', function() {
+
+    selectOption('no');
+
+});
 
 // Function to display the cat.gif initially
 function displayCat() {
@@ -115,9 +156,11 @@ function displayCatHeart() {
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
         // Hide the options container
-        document.getElementById('options').style.display = 'none';
+        
     };
 }
 
 // Display the cat.gif initially
 displayCat();
+displayCatHeart();
+

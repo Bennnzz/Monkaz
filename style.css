@@ -1,9 +1,18 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif; /* Fallback font family */
-    text-align: center; /* Center-align text */
-    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 100vh;
     background-color: #FADADD; /* Set background color to light pink */
 }
 
@@ -12,7 +21,7 @@ body {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align items horizontally */
     justify-content: center; /* Center-align items vertically */
-    height: 100vh; /* Make the container full viewport height */
+    height: 5vh; /* Make the container full viewport height */
 }
 
 #image-container {
@@ -22,6 +31,7 @@ body {
 #question {
     font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
     font-size: 52px; /* Set font size for the question */
+    text-align: center;
 }
 
 #options {
@@ -38,3 +48,103 @@ button {
     border: none; /* Remove button border */
     cursor: pointer; /* Set cursor to pointer on hover */
 }
+
+#envelope {
+
+    position: relative;
+
+    width: 1000px;
+
+    height: 500px;
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: justify;
+
+    align-items: center;
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    transform: scale(0);
+
+    opacity: 0;
+
+}
+
+
+.envelope-body {
+
+    background-color: #f3d9f8;
+
+    border: 2px solid #ccc;
+
+    border-radius: 5px;
+
+    position: relative;
+
+    width: 1000px;
+
+    height: 400px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+}
+
+
+.letter {
+
+    padding: 10px;
+    height: 100%; /* Make letter take full height */
+    font-family: 'Delius', cursive;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+
+}
+
+textarea {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+}
+
+#letter-content {
+
+    margin: 0; /* Remove default margin */
+
+    line-height: 2; /* Improve readability */
+
+}
+
+.hidden {
+
+    display: 5;
+
+}
+
+
+.animate {
+
+    transform: scale(1);
+
+    opacity: 1;
+
+}
+
+
