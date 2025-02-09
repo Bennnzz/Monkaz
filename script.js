@@ -1,26 +1,68 @@
 // script.js
 
 // Function to handle button click events
+let noButtonMessages = [
+
+    'You sure?',
+
+    'Pleasee?',
+
+    'Princess think about it:((',
+
+    'Are you suree? :((('
+
+];
+
+let noButtonIndex = 0; // To keep track of the current message index
+
+
 function selectOption(option) {
+
     // Check which option was clicked
+
     if (option === 'yes') {
+
         // Flash rainbow colors
+
         flashRainbowColors(function() {
+
             document.getElementById('question').style.display = 'none'; // Hide the question
+
             displayCatHeart(); // Display the cat-heart.gif
+
         });
+
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'You sure?'; 
+
+        // Change text on the "No" button to the next message
+
+        document.getElementById('no-button').innerText = noButtonMessages[noButtonIndex];
+
+        
+
+        // Update the index for the next message
+
+        noButtonIndex = (noButtonIndex + 1) % noButtonMessages.length;
+
+
         // Increase font size of "Yes" button
+
         var yesButton = document.getElementById('yes-button');
+
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
+
+        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by * 2
+
         yesButton.style.fontSize = newSize + 'px';
+
     } else {
+
         // If neither "Yes" nor "No" was clicked, show an alert message
+
         alert('Invalid option!');
+
     }
+
 }
 
 // Function to flash rainbow colors and then execute a callback function
