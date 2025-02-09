@@ -32,6 +32,7 @@ body {
     font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
     font-size: 52px; /* Set font size for the question */
     text-align: center;
+    display: flex;
 }
 
 #options {
@@ -83,6 +84,7 @@ button {
     border: 2px solid #ccc;
 
     border-radius: 5px;
+    display: flex;
 
     position: relative;
 
@@ -103,6 +105,7 @@ button {
     height: 100%; /* Make letter take full height */
     font-family: 'Delius', cursive;
     overflow-y: auto; /* Enable vertical scrolling if needed */
+    display: flex;
 
 }
 
@@ -127,7 +130,7 @@ textarea {
 #letter-content {
 
     margin: 0; /* Remove default margin */
-
+    display: flex;
     line-height: 2; /* Improve readability */
 
 }
