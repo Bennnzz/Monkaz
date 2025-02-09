@@ -61,7 +61,7 @@ button {
 
     margin-top: 5%;
 
-    display: flex;
+    
 
     justify-content: center;
 
@@ -74,6 +74,8 @@ button {
     transform: scale(0);
 
     opacity: 0;
+
+    display: flex;
 
 }
 
@@ -137,6 +139,7 @@ textarea {
     margin: 0; /* Remove default margin */
     display: flex;
     line-height: 2.5; /* Improve readability */
+    word-wrap: break-word;
 
 }
 
