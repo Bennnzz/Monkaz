@@ -3,7 +3,7 @@
 // Function to handle button click events
 let noButtonMessages = [
 
-    'You sure?',
+    'You surae?',
 
     'Pleasee?',
 
