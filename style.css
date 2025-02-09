@@ -57,9 +57,9 @@ button {
 
     width: 60%;
 
-    height: 40%;
+    height: 60%;
 
-    margin-top: 5%;
+    margin-top: 35%;
 
     max-width: 300px;
 
@@ -99,7 +99,7 @@ button {
 
     overflow: hidden;
 
-    
+    padding: 10px
 
 }
 
